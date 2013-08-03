@@ -3,7 +3,9 @@ package com.learn.cordvoa;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity extends Activity
+import org.apache.cordova.DroidGap;
+
+public class MainActivity extends DroidGap
 {
     /** Called when the activity is first created. */
     @Override
