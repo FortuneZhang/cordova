@@ -12,7 +12,7 @@ public class MainActivity extends DroidGap
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        loadUrl("file:///android_asset/www.index.html");
+        loadUrl("file:///android_asset/www/index.html");
 //        setContentView(R.layout.main);
     }
 }
