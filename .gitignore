@@ -32,4 +32,8 @@ Desktop.ini
 *.jar
 .idea
 .impl
-.settings
+.setting
+bin
+out
+gen
+.eclipse
