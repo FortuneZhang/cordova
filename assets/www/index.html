@@ -8,10 +8,41 @@
           name='viewport'>
     <meta content='yes' name='apple-mobile-web-app-capable'>
     <script type='text/javascript' src='libs/cordova/cordova-2.3.0.js'></script>
+    <script type="text/javascript">
+
+        var Calculator = {
+            add:function(first_arg,second_arg,success_callback,fail_callback){
+                cordova.exec(success_callback,fail_callback,"Calculator","add",[first_arg,second_arg]);
+            }
+        }
+
+        function calculate(){
+            var first_arg = document.getElementById("first_arg").value;
+            var second_arg = document.getElementById("second_arg").value;
+            var result = first_arg + second_arg;
+
+            Calculator.add(first_arg,second_arg,function(result){
+                console.log('aaa');
+                document.getElementById('result').innerText = result;
+            },function(error){
+                alert(error);
+            } );
+        }
+    </script>
 </head>
+
+
 <body>
-
-
+<div>
+    <input type="text" id="first_arg" >
+    <input type="text" id="second_arg">
+</div>
+<div>
+    the Result is : <span id="result"></span>
+</div>
+<div>
+    <button onclick="calculate()">Add</button>
+</div>
 
 
 
